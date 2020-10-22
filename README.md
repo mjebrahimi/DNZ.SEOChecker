@@ -1,4 +1,4 @@
-# DNZ.SEOCheker
+# DNZ.SEOChecker
 
 **SEO Checker Plugin (like wordpress Yoast) for ASP.NET Core.**
 
