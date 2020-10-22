@@ -14,7 +14,7 @@
     <Authors>Mohammad Javad Ebrahimi</Authors>
     <Company>Mohammad Javad Ebrahimi</Company>
     <Copyright>Copyright © Mohammad Javad Ebrahimi 2019</Copyright>
-    <Description>SEO Checker Plugin (like wordpress Yoast) for ASP.NET Core MVC</Description>
+    <Description>SEO Checker and Recommander Plugin (like wordpress Yoast) for ASP.NET Core MVC</Description>
     <PackageTags></PackageTags>
     <PackageProjectUrl>https://github.com/mjebrahimi/DNZ.SEOChecker</PackageProjectUrl>
     <RepositoryUrl>https://github.com/mjebrahimi/DNZ.SEOChecker</RepositoryUrl>
