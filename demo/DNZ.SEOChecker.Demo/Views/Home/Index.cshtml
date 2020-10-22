@@ -1,0 +1,26 @@
+﻿@model SeoInput
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section styles{ 
+    <style>
+        * {
+            direction: rtl;
+        }
+    </style>
+}
+
+<div class="text-center">
+    <h1 class="display-4"><a href="https://github.com/mjebrahimi/DNZ.SEOCheker">DNZ.SEOCheker</a></h1>
+    <p><strong>SEO Checker Plugin (like wordpress Yoast) for ASP.NET Core</strong></p>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        @await Component.InvokeAsync(typeof(SeoViewComponent), Model)
+    </div>
+    <div class="col-md-6">
+        <iframe style="width: 100%; height: 100%;border: 1px solid silver;" src="https://fa.wikipedia.org/wiki/%D8%A8%D9%87%DB%8C%D9%86%D9%87%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C_%D9%85%D9%88%D8%AA%D9%88%D8%B1_%D8%AC%D8%B3%D8%AA%D8%AC%D9%88"></iframe>
+    </div>
+</div>

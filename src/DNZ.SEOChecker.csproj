@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>DNZ.SEOChecker</AssemblyName>
+    <PackageId>DNZ.SEOChecker</PackageId>
+    <Product>DNZ.SEOChecker</Product>
+    <Title>Dnz.SEOChecker</Title>
+    <Version>1.0.0</Version>
+    <PackageVersion>1.0.0</PackageVersion>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Authors>Mohammad Javad Ebrahimi</Authors>
+    <Company>Mohammad Javad Ebrahimi</Company>
+    <Copyright>Copyright © Mohammad Javad Ebrahimi 2019</Copyright>
+    <Description>SEO Checker Plugin (like wordpress Yoast) for ASP.NET Core MVC</Description>
+    <PackageTags></PackageTags>
+    <PackageProjectUrl>https://github.com/mjebrahimi/DNZ.SEOChecker</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mjebrahimi/DNZ.SEOChecker</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.25" />
+  </ItemGroup>
+
+</Project>

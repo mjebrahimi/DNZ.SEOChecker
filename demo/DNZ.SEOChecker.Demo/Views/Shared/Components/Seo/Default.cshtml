@@ -1,0 +1,99 @@
+﻿@model DNZ.SEOChecker.SeoResult
+
+<div style="text-align: right; display: inline-block; background-color: whitesmoke; border: 1px solid silver; margin-bottom: 10px;">
+    <span style="color: #fff;display: block;padding: 10px;text-align: center;font-weight: bold; background-color: @(Model.BackgroundColor)">
+        امتیاز سئو : @Model.SeoScore/100
+    </span>
+    <div style="padding: 10px 15px;">
+        @if (Model.TitleMessages.Any())
+        {
+            <strong>عنوان</strong>
+            <br />
+            <ul class="ulSeo">
+                @foreach (var item in Model.TitleMessages.OrderByDescending(p => p.IsError))
+                {
+                    <li class="@(item.IsError ? "errorMessage" : "warningMessage")">
+                        @item.Message
+                    </li>
+                }
+            </ul>
+            <br />
+        }
+        @if (Model.KeywordMessages.Any())
+        {
+            <strong>کلمه کلیدی</strong>
+            <br />
+            <ul class="ulSeo">
+                @foreach (var item in Model.KeywordMessages.OrderByDescending(p => p.IsError))
+                {
+                    <li class="@(item.IsError ? "errorMessage" : "warningMessage")">
+                        @item.Message
+                    </li>
+                }
+            </ul>
+            <br />
+        }
+        @if (Model.UrlMessages.Any())
+        {
+            <strong>آدرس</strong>
+            <br />
+            <ul class="ulSeo">
+                @foreach (var item in Model.UrlMessages)
+                {
+                    <li class="@(item.IsError ? "errorMessage" : "warningMessage")">
+                        @item.Message
+                    </li>
+                }
+            </ul>
+            <br />
+        }
+        @if (Model.MetaDescriptionMessages.Any())
+        {
+            <strong>متا تگ توضیحات</strong>
+            <br />
+            <ul class="ulSeo">
+                @foreach (var item in Model.MetaDescriptionMessages.OrderByDescending(p => p.IsError))
+                {
+                    <li class="@(item.IsError ? "errorMessage" : "warningMessage")">
+                        @item.Message
+                    </li>
+                }
+            </ul>
+            <br />
+        }
+        @if (Model.TextMessages.Any())
+        {
+            <strong>متن</strong>
+            <br />
+            <ul class="ulSeo">
+                @foreach (var item in Model.TextMessages.OrderByDescending(p => p.IsError))
+                {
+                    <li class="@(item.IsError ? "errorMessage" : "warningMessage")">
+                        @item.Message
+                    </li>
+                }
+            </ul>
+            <br />
+        }
+    </div>
+</div>
+
+<style>
+    .errorMessage {
+        color: #FF2E2E;
+    }
+
+    .warningMessage {
+        color: darkorange;
+    }
+
+    .ulSeo {
+        display: inline-block;
+        margin: 0;
+    }
+
+        .ulSeo li {
+            /*list-style-type: none;*/
+            list-style-type: disc;
+        }
+</style>
